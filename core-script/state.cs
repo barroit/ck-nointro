@@ -1,0 +1,50 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+/*
+ * Copyright 2024, 2025, 2026 Jiamu Sun <barroit@linux.com>
+ */
+define(CONFIG, "NAME.json")dnl
+
+using System;
+using System.Text;
+using UnityEngine;
+
+using PugMod;
+
+[Serializable]
+public struct delay {
+	public float skip_logo;
+	public float skip_text;
+}
+
+public class state {
+
+public static IConfigFilesystem fs;
+
+public static void save(in delay data)
+{
+ifdef([[NDEBUG]], [[dnl
+	string json = JsonUtility.ToJson(data);
+]], [[dnl
+	string json = JsonUtility.ToJson(data, prettyPrint: true);
+]])dnl
+	byte[] raw = Encoding.UTF8.GetBytes(json);
+
+	fs.Write(CONFIG, raw);
+}
+
+public static delay load()
+{
+	if (!fs.FileExists(CONFIG))
+		return default;
+
+	byte[] buf = fs.Read(CONFIG);
+	string json = Encoding.UTF8.GetString(buf);
+
+	try {
+		return JsonUtility.FromJson<delay>(json);
+	} catch (Exception) {
+		return default;
+	}
+}
+
+} /* class state */
