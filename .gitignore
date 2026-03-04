@@ -4,3 +4,5 @@
 /.disasm
 
 /core/*.cs
+
+/nointro-v*.zip
