@@ -27,6 +27,7 @@ public void EarlyInit()
 	state.fs = API.ConfigFilesystem;
 	delay = state.load();
 
+	LOG($"version: {delay.version}")
 	LOG($"skip_logo: {delay.skip_logo}s")
 	LOG($"skip_text: {delay.skip_text}s")
 

@@ -12,6 +12,12 @@ using PugMod;
 
 [Serializable]
 public struct delay {
+	/*
+	 * FIXME: Treat each version bump as a value transformation, and build
+	 *        the final version's value bottom up.
+	 */
+	public int version;
+
 	public float skip_logo;
 	public float skip_text;
 }
