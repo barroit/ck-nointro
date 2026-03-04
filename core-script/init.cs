@@ -6,7 +6,7 @@ divert(-1)
 
 define(SCENE, Manager.main.currentSceneHandler)
 
-define(DELAY_SKIP_LOGO, 1.1f)
+define(DELAY_SKIP_LOGO, 1.39f)
 define(DELAY_SKIP_TEXT, .15f)
 
 define(BLACK_TO_BLACK, FadePresets.blackToBlack)
