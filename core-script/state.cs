@@ -10,6 +10,8 @@ using UnityEngine;
 
 using PugMod;
 
+ISOLATE_BEGIN
+
 [Serializable]
 public struct delay {
 	/*
@@ -50,3 +52,5 @@ public static delay load()
 }
 
 } /* class state */
+
+ISOLATE_END

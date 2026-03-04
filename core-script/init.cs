@@ -18,6 +18,8 @@ using UnityEngine;
 
 using PugMod;
 
+ISOLATE_BEGIN
+
 public class init : IMod {
 
 delay delay;
@@ -53,6 +55,7 @@ public void Init()
 	var seq = skip_intro(delay);
 
 	Manager.main.StartCoroutine(seq);
+	Debug.Log("miku");
 }
 
 public void ModObjectLoaded(Object _) {}
@@ -62,3 +65,5 @@ public void Update() {}
 public void Shutdown() {}
 
 } /* class init */
+
+ISOLATE_END
