@@ -28,11 +28,7 @@ public static IConfigFilesystem fs;
 
 public static void save(in delay data)
 {
-ifdef([[NDEBUG]], [[dnl
-	string json = JsonUtility.ToJson(data);
-]], [[dnl
-	string json = JsonUtility.ToJson(data, prettyPrint: true);
-]])dnl
+	string json = JsonUtility.ToJson(data, true);
 	byte[] raw = Encoding.UTF8.GetBytes(json);
 
 	fs.Write(CONFIG, raw);
