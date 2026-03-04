@@ -47,7 +47,7 @@ that appears after the logo screen.
 Defaults
 ========
 
-The default value of ``skip_logo`` is ``1.1``. The default value of
+The default value of ``skip_logo`` is ``1.39``. The default value of
 ``skip_text`` is ``0.15``.
 
 These defaults are calibrated for standard hardware. Tune as needed for your
