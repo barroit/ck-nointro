@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 /*
- * Copyright 2024, 2025, 2026 Jiamu Sun <barroit@linux.com>
+ * Copyright 2024-2026 Jiamu Sun <barroit@linux.com>
  */
 define(CONFIG, "NAME.json")dnl
 
