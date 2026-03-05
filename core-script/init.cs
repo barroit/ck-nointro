@@ -55,7 +55,6 @@ public void Init()
 	var seq = skip_intro(delay);
 
 	Manager.main.StartCoroutine(seq);
-	Debug.Log("miku");
 }
 
 public void ModObjectLoaded(Object _) {}
